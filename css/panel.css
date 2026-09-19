@@ -1,0 +1,326 @@
+@font-face { font-family: 'Acidic'; src: url('../fonts/Acidic.TTF');}
+@font-face { font-family: 'Biski'; src: url('../fonts/BiskiTrial-Regular.otf');}
+@font-face { font-family: 'LSp'; src: url('../fonts/LeagueSpartan-Bold.otf');}
+
+@keyframes fadeIn { /* makes animation work */
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url("../pictures/main.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps bg fixed while scrolling */
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.hero-section {
+    height: 100vh; /* Takes up the full screen height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.mainlogo { /* "study space." nasa top left*/
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    font-size: 24px;
+    font-weight: 100;
+    color: #f0f0f0;
+    font-family: 'Acidic', sans-serif;
+}
+
+/* log-in */
+.login-container {
+    width: 560px; 
+    padding: 30px 35px;
+    background: rgba(30, 29, 50, 0.22);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* build ur own comfort */
+.login-container h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: white;
+    margin-bottom: 25px;
+    text-align: left;
+    font-family: 'LSp', sans-serif;
+}
+
+.aligntitleright { /* minomove sa right yung text */
+    display: block;
+    text-align: center;
+    font-family: 'LSp', sans-serif;
+}
+
+/* labels, username & pass */
+label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 5px;
+    font-family: 'Biski', sans-serif;
+}
+
+/* user types */
+input {
+    width: 100%;
+    padding: 12px;      
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.1); /* 0.1, transparent */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #4a4a70;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #5a5a8a;
+}
+
+/* register part */
+.login-container p {
+    margin-top: 20px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    
+}
+
+.login-container a {
+    color: white;
+    font-weight: 600;
+    text-decoration: underline; 
+    font-family: 'Biski', sans-serif;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px; 
+    height: 24px; 
+    vertical-align: middle;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.2); 
+    transition: .4s;
+    border-radius: 34px; 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* circle kineme */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 2px; 
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+input:checked + .slider {
+    background-color: #6C63FF; 
+    border-color: #6C63FF;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px); 
+}
+
+.dashboard-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; 
+    animation: fadeIn 1.5s ease-in-out forwards; 
+}
+
+.main-greeting {
+    font-family: 'Acidic', sans-serif;
+    font-size: 7vw; 
+    font-weight: 900;
+    line-height: 1.1;
+    text-shadow: 0 0 15px rgba(0,0,0,0.5); 
+}
+
+.motivational-quote {
+    font-family: 'Biski', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 20px;
+    color: #f0f0f0;
+}
+
+.cta-wrapper {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px; 
+}
+
+.cta-wrapper button {
+    width: 100%;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.15); 
+    border: 2px solid rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(5px);
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta-wrapper button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid white;
+}
+
+.register-link {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+}
+
+.register-link a {
+    font-family: 'Biski', sans-serif; 
+}
+
+
+.features-section {
+    width: 100%;
+    padding: 80px 50px;
+    background: rgba(215, 215, 219, 0.3); 
+    text-align: center;
+    color: white;
+}
+
+.features-header h2 {
+    font-family: 'LSp', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.features-header p {
+    font-family: 'Biski', sans-serif;
+    font-size: 18px;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto 50px; 
+}
+
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: rgba(30, 29, 50, 0.22);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 35px 25px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-family: 'LSp', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.feature-card p {
+    font-family: 'Biski', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+@media (max-width: 900px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 600px) {
+    .features-grid {
+        grid-template-columns: 1fr; 
+    }
+    .features-header h2 {
+        font-size: 28px;
+    }
+}

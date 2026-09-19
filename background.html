@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/background.css">
+</head>
+
+<body>
+    <div class="background-overlay" id="background-overlay"></div>
+
+    <div id="particle-canvas"></div>
+
+    <button id="world-trigger">
+        <img src="pictures/bg-trigger.png" alt="Folder icon">
+    </button>
+
+    <div id="worlds-modal">
+        <button class="close-button" id="close-modal">×</button>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Ambient Worlds</h2>
+                <p>Choose your perfect environment</p>
+            </div>
+
+            <div class="worlds-grid">
+
+                <div class="world-card active" data-world="lofi-cafe" data-bg-url="pictures/background-1.jpg">
+                    <img src="pictures/background-1.jpg" alt="Lofi cafe" class="card-bg-image">
+                    <div class="checkmark">✓</div>
+                    <div class="world-name">Lofi Cafe</div>
+                </div>
+
+                <div class="world-card" data-world="lofi-bar" data-bg-url="pictures/background-2.jpg">
+                    <img src="pictures/background-2.jpg" alt="Blue bar" class="card-bg-image">
+                    <div class="checkmark">✓</div>
+                    <div class="world-name">Blue Hour</div>
+                </div>
+
+                <div class="world-card" data-world="lofi-moon" data-bg-url="pictures/background-3.jpg">
+                    <img src="pictures/background-3.jpg" alt="Midnight Moon" class="card-bg-image">
+                    <div class="checkmark">✓</div>
+                    <div class="world-name">Midnight Moon</div>
+                </div>
+
+                <div class="world-card" data-world="forest" data-bg-url="pictures/ambientbg.jpg">
+                    <img src="pictures/ambientbg.jpg" alt="Forest" class="card-bg-image">
+                    <div class="checkmark">✓</div>
+                    <div class="world-name">Forest</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/background.js"></script>
+</body>
+</html>

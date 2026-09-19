@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/soundboard.css">
+</head>
+<body>
+    <div id="particle-bg"></div>
+
+    <button id="music-icon"> 
+        <img src="pictures/sound-cloud-48.png" alt="Music icon">
+    </button>
+
+    <div id="sound-frame">
+        <div class="nav-bar">
+            <h2>Sounds</h2>
+            <p>Mix and layer your perfect ambiance</p>
+        </div>
+    
+
+        <div class="sound-grid">
+            <div class="sound-card" data-sound="rain">
+                <span class="sound-icon"> 
+                    <img src="pictures/icons8-rain-icon.apng" alt="Rain icon">
+                </span>
+                <div class="sounds-name">Rain</div>
+
+                <audio data-sound="rain" src="sounds/Heavy Rain Sounds - 1 hour.mp3" loop preload="auto"></audio>
+
+                <div class="play-indicator">▶ Tap to play</div>
+                <div class="volume">
+                    <input type="range" class="volume-slider" min="0"
+                    max="100" value="50">
+                    <div class="volume-text">Volume:<span class="volume-value">50</span>%</div>    
+                </div>
+            </div>
+
+            <div class="sound-card" data-sound="ocean">
+                <span class="sound-icon"> 
+                    <img src="pictures/icons8-ocean-wave-48.png" alt="Wave icon">
+                </span>
+                <div class="sounds-name">Ocean</div>
+
+                <audio data-sound="rain" src="sounds/Sound of Waves-2 mins.mp3" loop preload="auto"></audio>
+
+                <div class="play-indicator">▶ Tap to play</div>
+                <div class="volume">
+                    <input type="range" class="volume-slider" min="0"
+                    max="100" value="50">
+                    <div class="volume-text">Volume:<span class="volume-value">50</span>%</div>    
+                </div>
+            </div>
+
+            <div class="sound-card" data-sound="cafe">
+                <span class="sound-icon"> 
+                    <img src="pictures/icons8-cafe-20.png" alt="Cafe icon">
+                </span>
+                <div class="sounds-name">Cafe</div>
+
+                <audio data-sound="rain" src="sounds/Busy Coffee Shop - 15 mins.mp3" loop preload="auto"></audio>
+                
+                <div class="play-indicator">▶ Tap to play</div>
+                <div class="volume">
+                    <input type="range" class="volume-slider" min="0"
+                    max="100" value="50">
+                    <div class="volume-text">Volume:<span class="volume-value">50</span>%</div>    
+                </div>
+            </div>
+
+            <div class="sound-card" data-sound="wind">
+                <span class="sound-icon"> 
+                    <img src="pictures/icons8-wind-48.png" alt="Wind icon">
+                </span>
+                <div class="sounds-name">Wind</div>
+
+                <audio data-sound="rain" src="sounds/Wind Sounds - 10 Minutes.mp3" loop preload="auto"></audio>
+
+                <div class="play-indicator">▶ Tap to play</div>
+                <div class="volume">
+                    <input type="range" class="volume-slider" min="0"
+                    max="100" value="50">
+                    <div class="volume-text">Volume:<span class="volume-value">50</span>%</div>    
+                </div>
+            </div>
+
+            <div class="sound-card" data-sound="cat-purr">
+                <span class="sound-icon"> 
+                    <img src="pictures/icons8-cat-60.png" alt="Cat icon">
+                </span>
+                <div class="sounds-name">Cat purr</div>
+                <audio data-sound="rain" src="sounds/Cat Purring.mp3" loop preload="auto"></audio>
+                <div class="play-indicator">▶ Tap to play</div>
+                <div class="volume">
+                    <input type="range" class="volume-slider" min="0"
+                    max="100" value="50">
+                    <div class="volume-text">Volume:<span class="volume-value">50</span>%</div>    
+                </div>
+            </div>
+
+            <div class="sound-card" data-sound="birds">
+                <span class="sound-icon"> 
+                    <img src="pictures/icons8-bird-60.png" alt="Bird icon">
+                </span>
+                <div class="sounds-name">Birds</div>
+                <audio data-sound="rain" src="sounds/birds.mp3" loop preload="auto"></audio>
+                <div class="play-indicator">▶ Tap to play</div>
+                <div class="volume">
+                    <input type="range" class="volume-slider" min="0"
+                    max="100" value="50">
+                    <div class="volume-text">Volume:<span class="volume-value">50</span>%</div>    
+                </div>
+            </div>
+
+        </div>
+
+        <div class="status-footer">
+            <span class="count">0</span> sounds playing
+        </div>
+    </div>
+    <script src="js/soundboard.js"></script>
+    <script src="js/pomodoro.js"></script>
+
+</body>
+</html>

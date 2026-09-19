@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>dashboard - study space.</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3><span id="userName">User</span>'s Space</h3>
+                <p>study space.</p>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="active"><a href="#">Dashboard</a></li>
+                <li><a href="study-mode.html">Study Mode</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="dark-mode">
+                    <span class="slider round"></span>
+                </label>
+                
+                <span class="mode-label">Light Mode</span>
+            </div>
+                <a href="php/logout.php" class="logout-link">Logout</a>
+            </div>
+        </nav>
+
+        <main class="main-content">
+
+            <div class="main-header">
+                <h2>Welcome, <span id="userNameHeader">User</span>!</h2>
+            </div>
+
+            <div class="widget-grid">
+
+                <div class="widget" id="todo-widget">
+                    <h3>To-Do</h3>
+                    <p>focus on one thing at a time.</p>
+
+                <div class="add-task-container">
+                <input type="text" id="new-task-input" placeholder="Add a new task..."> <button id="add-task-btn">Add</button> </div>
+
+                <table class="task-table">
+                <tbody id="task-list-body"> </tbody>
+                </table>
+                    </div>
+
+                <div class="widget" id="note-widget">
+                    <h3>Safe Space</h3>
+                    <p>express what you feel.</p>
+                    <textarea id="sticky-note-area" placeholder="Type here..."></textarea>
+                    <p id="save-status" style="font-size: 12px; color: #aaa; margin-top: 5px;">Saved.</p>
+                </div>
+
+                <div class="widget" id="links-widget">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="https://mail.google.com">Google Mail</a></li>
+                        <li><a href="https://docs.google.com/document/u/0">Google Docs</a></li>
+                        <li><a href="https://lms.ccc.edu.ph">University Portal</a></li>
+                        <li><a href="https://scholar.google.com">Google Scholar</a></li> 
+                    </ul>
+                </div>
+                
+                <div class="widget" id="quote-widget">
+                <h3>Quote</h3>
+                <p id="quote-text" style="font-style: italic; opacity: 0.8;">"Loading..."</p>
+                </div>
+
+                <div class="widget clock-widget">
+                <h3>Clock</h3>
+                <div class="clock-display" id="clock-time">11:11 AM</div> 
+                <div class="date-display" id="clock-date">Tuesday, Nov. 11, 2025</div>
+                </div>
+
+                <div class="widget" id="music-widget">
+                    <h3>Background Noise</h3>
+                    <p>choose your vibe.</p>
+
+                    <div class="mini-sound-grid">
+        <div class="mini-sound-item" onclick="toggleMiniSound(this, 'rain')">
+            <img src="pictures/icons8-rain-icon.apng" alt="Rain">
+            <audio id="audio-rain" src="sounds/Heavy Rain Sounds - 1 hour.mp3" loop></audio>
+        </div>
+
+        <div class="mini-sound-item" onclick="toggleMiniSound(this, 'ocean')">
+            <img src="pictures/icons8-ocean-wave-48.png" alt="Ocean">
+            <audio id="audio-ocean" src="sounds/Sound of Waves-2 mins.mp3" loop></audio>
+        </div>
+
+        <div class="mini-sound-item" onclick="toggleMiniSound(this, 'cafe')">
+            <img src="pictures/icons8-cafe-20.png" alt="Cafe">
+            <audio id="audio-cafe" src="sounds/Busy Coffee Shop - 15 mins.mp3" loop></audio>
+        </div>
+
+        <div class="mini-sound-item" onclick="toggleMiniSound(this, 'wind')">
+            <img src="pictures/icons8-wind-48.png" alt="Wind">
+            <audio id="audio-wind" src="sounds/Wind Sounds - 10 Minutes.mp3" loop></audio>
+        </div>
+
+        <div class="mini-sound-item" onclick="toggleMiniSound(this, 'cat')">
+            <img src="pictures/icons8-cat-60.png" alt="Cat">
+            <audio id="audio-cat" src="sounds/Cat Purring.mp3" loop></audio>
+        </div>
+
+        <div class="mini-sound-item" onclick="toggleMiniSound(this, 'birds')">
+            <img src="pictures/icons8-bird-60.png" alt="Birds">
+            <audio id="audio-birds" src="sounds/birds.mp3" loop></audio>
+        </div>
+    </div>
+</div>
+        </main>
+    </div>
+
+    <script src="js/name.js"></script> 
+    <script src="js/datetime.js"></script>
+    <script src="js/notes.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background_noise.js"></script>
+    <script src="js/todo.js"></script>
+
+</body>
+</html>

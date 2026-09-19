@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../HTML"
+		},
+		{
+			"path": "../Python"
+		},
+		{
+			"path": "../../Downloads/AcadTracker"
+		},
+		{
+			"path": "../bloomED"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "FINALS"
+	}
+}

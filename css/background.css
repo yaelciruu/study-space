@@ -1,0 +1,192 @@
+/* css/background.css - FINAL CLEAN VERSION */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
+    color: white;
+    position: relative;
+    overflow-x: hidden;
+    transition: all 0.8s ease;
+    
+    /* DEFAULT BACKGROUND */
+    background: url("../pictures/main.jpg") no-repeat center/cover fixed;
+}
+
+/* Glassy Overlay sa Background (Optional: pampaganda ng blending) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    background: rgba(30, 29, 50, 0.3);
+    backdrop-filter: blur(0px); /* Adjust kung gusto mo ng blur sa main BG */
+    pointer-events: none;
+}
+
+/* --- TRIGGER BUTTON (Folder Icon) --- */
+#world-trigger {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    font-size: 34px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+#world-trigger:hover {
+    transform: scale(1.1) rotate(15deg);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+#worlds-modal {
+    position: fixed;
+    
+    bottom: 115px; 
+    right: 30px;
+    
+    width: 500px;
+    max-height: 600px;
+    
+    overflow-y: auto;
+    padding: 20px;
+    
+    background: rgba(218, 212, 212, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    
+    z-index: 1000;
+    
+    opacity: 0;
+    transform: translateY(20px); 
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#worlds-modal.visible {
+    opacity: 1;
+    transform: translateY(0); 
+    pointer-events: auto;
+}
+
+.modal-header {
+    text-align: left;
+    margin-bottom: 15px;
+    padding-right: 30px; 
+}
+.modal-header h2 { font-size: 1.2rem; margin-bottom: 5px; color: white; }
+.modal-header p { font-size: 0.8rem; color: rgba(255, 255, 255, 0.6); }
+
+.worlds-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px;
+}
+
+.world-card {
+    position: relative;
+    height: 100px; 
+    border-radius: 12px;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.world-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.world-card.active {
+    border-color: #10b981; 
+}
+
+.world-card .card-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.world-name {
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    z-index: 2;
+}
+
+.world-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    z-index: 1;
+}
+
+.checkmark {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #10b981;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.world-card.active .checkmark { display: flex; }
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    font-size: 18px;
+    z-index: 1002;
+}
+.close-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+#worlds-modal::-webkit-scrollbar { width: 5px; }
+#worlds-modal::-webkit-scrollbar-track { background: transparent; }
+#worlds-modal::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
